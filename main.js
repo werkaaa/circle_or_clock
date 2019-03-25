@@ -196,7 +196,7 @@ preprocess the data
 function preprocess(imgData) {
     return tf.tidy(() => {
         //convert to a tensor 
-        let tensor = tf.toPixels(imgData, numChannels = 1)
+        let tensor = tf.fromPixels(imgData, numChannels = 1)
         
         //resize 
         const resized = tf.image.resizeBilinear(tensor, [28, 28]).toFloat()
