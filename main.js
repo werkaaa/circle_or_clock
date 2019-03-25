@@ -196,7 +196,7 @@ preprocess the data
 function preprocess(imgData) {
     return tf.tidy(() => {
         //convert to a tensor 
-        imgData = tf.constant(imgData)
+        imgData = tf.tensor(imgData)
         let tensor = tf.browser.toPixels(imgData, numChannels = 1)
         
         //resize 
