@@ -219,7 +219,7 @@ async function start(cur_mode) {
     mode = cur_mode
     
     //load the model 
-    model = await tf.loadModel('model3/model.json')
+    model = await tf.loadLayersModel('model3/model.json')
     
     //warm up 
     //the first prediction will take a long time, so let's do it earlier
